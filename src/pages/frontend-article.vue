@@ -85,7 +85,7 @@ export default {
         }
     },
     metaInfo() {
-        const title = this.article.data.title ? this.article.data.title + ' - M.M.F 小屋' : 'M.M.F 小屋'
+        const title = this.article.data.title ? this.article.data.title + ' - Briefwin|简赢' : 'Briefwin|简赢'
         return {
             title,
             meta: [{ vmid: 'description', name: 'description', content: title }]

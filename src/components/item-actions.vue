@@ -39,7 +39,7 @@ export default {
         share() {
             const top = window.screen.height / 2 - 250
             const left = window.screen.width / 2 - 300
-            const title = this.item.title + ' - M.M.F 小屋'
+            const title = this.item.title + ' - Briefwin|简赢'
             const url = 'https://www.mmxiaowu.com/article/' + this.item._id
             window.open(
                 'http://service.weibo.com/share/share.php?title=' +

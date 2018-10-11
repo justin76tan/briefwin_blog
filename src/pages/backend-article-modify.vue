@@ -129,8 +129,8 @@ export default {
     },
     metaInfo() {
         return {
-            title: '编辑文章 - M.M.F 小屋',
-            meta: [{ vmid: 'description', name: 'description', content: 'M.M.F 小屋' }]
+            title: '编辑文章 - Briefwin|简赢',
+            meta: [{ vmid: 'description', name: 'description', content: 'Briefwin|简赢' }]
         }
     }
 }

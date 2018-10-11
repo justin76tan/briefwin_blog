@@ -72,8 +72,8 @@ export default {
     },
     metaInfo() {
         return {
-            title: '用户列表 - M.M.F 小屋',
-            meta: [{ vmid: 'description', name: 'description', content: 'M.M.F 小屋' }]
+            title: '用户列表 - Briefwin|简赢',
+            meta: [{ vmid: 'description', name: 'description', content: 'Briefwin|简赢' }]
         }
     }
 }

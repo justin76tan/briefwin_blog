@@ -39,15 +39,49 @@ function checkCode(res) {
 }
 
 export default {
-    post(url, data) {
+    delete(url, data) {
         return axios({
-            method: 'post',
-            url: config.api + url,
+            method: 'delete',
+            // url: config.api + url,
+            url: url,
             data: qs.stringify(data),
             timeout: config.timeout,
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                'Content-Type': 'application/json; charset=UTF-8',
+                'HTTP_TIMELINE': parseInt(new Date().getTime()/1000).toString()
+            }
+        })
+            .then(checkStatus)
+            .then(checkCode)
+    },
+    post(url, data) {
+        return axios({
+            method: 'post',
+            // url: config.api + url,
+            url: url,
+            data: qs.stringify(data),
+            timeout: config.timeout,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/json; charset=UTF-8',
+                'HTTP_TIMELINE': parseInt(new Date().getTime()/1000).toString()
+            }
+        })
+            .then(checkStatus)
+            .then(checkCode)
+    },
+    put(url, data) {
+        return axios({
+            method: 'put',
+            // url: config.api + url,
+            url: url,
+            data: qs.stringify(data),
+            timeout: config.timeout,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/json; charset=UTF-8',
+                'HTTP_TIMELINE': parseInt(new Date().getTime()/1000).toString()
             }
         })
             .then(checkStatus)
@@ -56,11 +90,13 @@ export default {
     get(url, params) {
         return axios({
             method: 'get',
-            url: config.api + url,
+            // url: config.api + url,
+            url: url,
             params,
             timeout: config.timeout,
             headers: {
-                'X-Requested-With': 'XMLHttpRequest'
+                'X-Requested-With': 'XMLHttpRequest',
+                'HTTP_TIMELINE': parseInt(new Date().getTime()/1000).toString()
             }
         })
             .then(checkStatus)

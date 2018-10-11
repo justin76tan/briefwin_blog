@@ -58,8 +58,8 @@ export default {
     },
     metaInfo() {
         return {
-            title: '管理员登录 - M.M.F 小屋',
-            meta: [{ vmid: 'description', name: 'description', content: 'M.M.F 小屋' }]
+            title: '管理员登录 - Briefwin|简赢',
+            meta: [{ vmid: 'description', name: 'description', content: 'Briefwin|简赢' }]
         }
     }
 }

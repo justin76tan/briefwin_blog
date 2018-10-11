@@ -74,8 +74,8 @@ export default {
     mounted() {},
     metaInfo() {
         return {
-            title: '关于 - M.M.F 小屋',
-            meta: [{ vmid: 'description', name: 'description', content: 'M.M.F 小屋' }]
+            title: '关于 - Briefwin|简赢',
+            meta: [{ vmid: 'description', name: 'description', content: 'Briefwin|简赢' }]
         }
     }
 }
