@@ -3,9 +3,9 @@
         <div class="home-feeds cards-wrap">
             <div class="settings-main card">
                 <div class="settings-main-content">
-                    <a-input title="昵称">
-                        <input type="text" v-model="form.username" placeholder="昵称" class="base-input" name="username">
-                        <span class="input-info error">请输入昵称</span>
+                    <a-input title="账号">
+                        <input type="text" v-model="form.username" placeholder="用户名/邮箱/手机号" class="base-input" name="username">
+                        <span class="input-info error">请输入账号</span>
                     </a-input>
                     <a-input title="密码">
                         <input type="password" v-model="form.password" placeholder="密码" class="base-input" name="password">
@@ -50,8 +50,8 @@ export default {
                 showMsg('请输入用户名和密码!')
                 return
             }
-            const { code, data } = await this.$store.$api.post('backend/admin/login', this.form)
-            if (data && code === 200) {
+            const { status, data } = await this.$store.$api.post('account/loginout/', this.form)
+            if (status==0) {
                 window.location.href = '/backend/article/list'
             }
         }
