@@ -28,8 +28,8 @@ import aInput from '~components/_input.vue'
 export default {
     name: 'backend-login',
     beforeRouteEnter(to, from, next) {
-        if (cookies.get('b_user')) {
-            window.location.href = '/backend/article/list'
+        if (sessionStorage.getItem('usergenre')) {
+            window.location.href = '/backend/user/list'
         }
         next()
     },
@@ -52,7 +52,8 @@ export default {
             }
             const { status, data } = await this.$store.$api.post('account/loginout/', this.form)
             if (status==0) {
-                window.location.href = '/backend/article/list'
+                sessionStorage.setItem('usergenre', data.usergenre)
+                window.location.href = '/backend/user/list'
             }
         }
     },

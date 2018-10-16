@@ -36,7 +36,7 @@ const scrollBehavior = to => {
 }
 
 const guardRoute = (to, from, next) => {
-    const token = cookies.get('b_user') || !inBrowser
+    const token = sessionStorage.getItem('usergenre') || !inBrowser
     if (!token) {
         next('/')
     } else {

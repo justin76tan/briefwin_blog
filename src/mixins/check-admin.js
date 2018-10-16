@@ -3,7 +3,7 @@ import { inBrowser } from '~utils'
 
 export default {
     beforeRouteEnter(to, from, next) {
-        if (inBrowser && !cookies.get('b_user')) {
+        if (inBrowser && !sessionStorage.getItem('usergenre')) {
             window.location.href = '/backend'
         }
         next()
