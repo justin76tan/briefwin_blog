@@ -22,8 +22,8 @@ const actions = {
         config
     ) {
         if (state.lists.data.length > 0 && config.path === state.lists.path && config.page === 1) return
-        const { code, data } = await $api.get('backend/user/list', { ...config, cache: true })
-        if (data && code === 200) {
+        const { status, data } = await $api.get('backend/userman/userman/', { ...config, cache: true })
+        if (data && status === 0) {
             commit('receiveUserList', {
                 ...data,
                 ...config
